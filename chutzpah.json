@@ -1,0 +1,37 @@
+﻿{
+  "Framework": "jasmine",
+  "TestHarnessReferenceMode": "Normal",
+  "TypeScriptModuleKind": "CommonJS",
+
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ]
+
+  },
+  "References": [
+    {
+      "Includes": [ "src/*.ts" ],
+      "Excludes": [ "src/*.d.ts" ]
+    },
+    {
+      "Path": "./jspm_packages/system.src.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "./jspm_packages/system-polyfills.src.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "./config.js",
+      "IsTestFrameworkFile": true
+    }
+
+  ],
+  "Tests": [
+    {
+      "Includes": [ "*/test/*.ts" ],
+      "Excludes": [ "*/test/*.d.ts" ]
+    }
+  ]
+}
